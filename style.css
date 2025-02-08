@@ -275,20 +275,28 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    table-layout: fixed; /* Fix column widths */
 }
 
+.nametable{
+    text-align: left;
+}
 th, td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #444;
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden;
+    
     text-overflow: ellipsis; /* Cut long text with "..." */
     max-width: 120px; /* Set max width for each column */
 }
-
+th:first-child, td:first-child { /* Rank column */
+    width: 50px; /* Adjust as needed */
+    text-align: center;}
+    th:nth-child(2), td:nth-child(2) { /* Name column */
+        width: auto; /* Allow it to take more space */
+        white-space: nowrap;
+    }
 th {
     background: rgb(0, 0, 0);
     color: #77cf6d;
@@ -426,14 +434,30 @@ input {
 
 
 .main-text{
-   
     text-align: center;
     justify-content: center;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
     font-weight: 600;
-    background-color: rgb(41, 41, 41);
+    color:#ffffff;
+    background-color: rgb(51, 51, 51);
     border-radius: 10px;
+    text-decoration: none;
+}
+.ab {
+    color: rgb(149, 212, 59);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color:#75da6b;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    text-decoration: none;
 }
